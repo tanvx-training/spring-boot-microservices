@@ -2,7 +2,7 @@ version: '2.1'
 
 services:
   course:
-    build: ../microservices/course-service
+    build: ../micro-services/course-service
     image: javatab/course_service:v2
     mem_limit: 512m
     environment:
@@ -14,7 +14,7 @@ services:
         condition: service_healthy
 
   search:
-    build: ../microservices/search-service
+    build: ../micro-services/search-service
     image: javatab/search_service:v2
     mem_limit: 512m
     environment:
@@ -26,7 +26,7 @@ services:
         condition: service_healthy
 
   student:
-    build: ../microservices/student-service
+    build: ../micro-services/student-service
     image: javatab/student_service:v2
     mem_limit: 512m
     environment:
@@ -38,7 +38,7 @@ services:
         condition: service_healthy
 
   vote:
-    build: ../microservices/vote-service
+    build: ../micro-services/vote-service
     image: javatab/vote_service:v2
     mem_limit: 512m
     environment:
@@ -50,7 +50,7 @@ services:
         condition: service_healthy
 
   course-composite:
-    build: ../microservices/course-composite-service
+    build: ../micro-services/course-composite-service
     image: javatab/course_composite_service:v2
     mem_limit: 512m
     environment:
